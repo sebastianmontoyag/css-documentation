@@ -1,0 +1,141 @@
+/*reset **/
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+      font-family: monospace, sans-serif;
+      display: flex;
+      flex-direction: column;
+  }
+
+/*nav to the left in desktop*/
+
+#navbar {
+    position: fixed;
+    min-width: 250px;
+    width: 250px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(206, 213, 223);
+    border-right: solid 3px;
+   
+
+}
+/*Style title*/
+#navbar h1{
+    padding: 4px 8px;
+    border-bottom: solid 2px;
+    
+}
+/*style links in nav*/
+#navbar ul{
+    height: 99%;
+    list-style: none;
+    overflow: auto;
+    white-space: nowrap;
+
+        
+}
+#navbar li a{
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.nav-link{
+    color: black;
+    border-bottom: solid 1px ;
+}
+.nav-link:hover {
+    background-color: grey;
+    color: white;
+
+}
+
+
+
+/*use main as a wrapper*/
+main{
+    position: absolute;
+    margin-left: 270px;
+    padding: 10px;
+    margin-top: 50px;
+    margin: 50px auto 100px 270px;
+}
+
+/*sections by class in general*/
+.main-section {
+    width: 60%;
+    min-width: 400px;
+    padding: 10px 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-bottom: solid 1px grey;
+    border-left:solid 1px grey;
+    text-align: justify;
+    
+}
+
+/* header + content in sections */
+
+.main-section h2{
+    color: grey;
+    text-shadow:2px 2px lightgrey;
+    padding: 10px 10px;
+    
+}
+
+.main-section p{
+    padding: 10px 10px;
+
+}
+
+.main-section ul{
+    margin-left: 50px;
+
+}
+
+/*code style*/
+.code-snippet{
+    background-color: lightgray;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    border-left: solid 3px darkgray;
+}
+
+.code-snippet pre code{
+    display: block;
+    white-space: pre-line;
+    padding-left: 10px;
+}
+
+/* media query for the nav responsiveness */
+/*use screen and vh values*/
+@media only screen and (max-width: 900px) {
+    #navbar ul{
+        border: solid 2px;
+        height: 157px;
+        text-align: center;
+
+    }
+
+    #navbar {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-height: 200px;
+        z-index: 1;
+    }
+
+    main {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 250px;
+    }
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Documentation</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header><h1> CSS Documentation</h1></header>
+            <ul>
+                <li><a class="nav-link" href="#introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#syntax">Syntax</a></li>
+                <li><a class="nav-link" href="#more_syntax!">More Syntax!</a></li>
+                <li><a class="nav-link" href="#specification">Specification</a></li>
+                <li><a class="nav-link" href="#browser_support">Browser Support</a></li>
+                <li><a class="nav-link" href="#references">References</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc" >  
+
+            <section id="introduction" class="main-section">
+                <header>
+                    <h2>Introduction</h2>
+                </header>
+                <content>
+                    <p>Cascading Style Sheets is a stylesheet 
+                        language used for describe the presentation of 
+                        an HTML or XML document. CSS describes how elements
+                         should be rendered.</p>
+                    <p>
+                        It is one of the core languages of the open Web and 
+                        is standardized across Web browsers according to the
+                         W3C specification.</p>
+                    <p>
+                        From CSS3, the scope of the specification increased 
+                        significantly and the progress on different CSS 
+                        modules started to differ so much, that it became 
+                        more effective to develop and release recommendations 
+                        separately per module. Instead of versioning the CSS
+                         specification, W3C now periodically takes a snapshot of
+                          the latest stable state of the CSS specification.
+                    </p>
+                       
+                
+                </content>
+            </section>
+            <section id="syntax" class="main-section">
+                <header>
+                    <h2>Syntax</h2>
+                </header>
+                <content>
+                    <p>CSS (Cascading Style Sheets) is used to style and layout web 
+                        pages — for example, to alter the font, color, size, and
+                         spacing of your content, split it into multiple columns, 
+                         or add animations and other decorative features. </p>
+
+                    <P>CSS is a rule-based language — you define rules specifying 
+                        groups of styles that should be applied to particular 
+                        elements or groups of elements on your web page. For 
+                        example "I want the main heading on my page to be shown 
+                        as large red text."</P>
+
+                    <p>The following code shows a very simple CSS rule that would 
+                        achieve the styling described above:</p>
+                    <div class="code-snippet">
+                        <pre>
+                            <code>
+                                h1 {
+                                    &nbsp;&nbsp;&nbsp;&nbsp;color: red;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 5em;
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                    
+
+                    <p>The rule opens with a selector . This selects the HTML 
+                        element that we are going to style. In this case we are 
+                        styling level one headings.</p>
+
+
+                    <p>We then have a set of curly braces { }. Inside those will 
+                        be one or more declarations, which take the form of property 
+                        and value pairs. Each pair specifies a property of the element(s) 
+                        we are selecting, then a value that we'd like to give the property.</p>
+
+                    <p>Before the colon, we have the property, and after the colon, the value. 
+                        CSS properties have different allowable values, depending on which 
+                        property is being specified. In our example, we have the 
+                        color property, which can take various color values. We 
+                        also have the font-size property. This property can take various 
+                        size units as a value.</p>
+
+                    
+                </content>
+            </section>
+            <section id="more_syntax!" class="main-section">
+                <header>
+                    <h2>More Syntax!</h2>
+                </header>
+                <content>
+                    <p>We can style various type of elements by refering to them 
+                        using IDs or classes. This is set up in html by adding those attributes to our html tags.</p>
+
+                    <p>Here we have anexample of how you can style an element h1 
+                        from the title of every section.</p>
+
+                        <div class="code-snippet">
+                            <pre>
+                                <code>
+                                    .section-title h1 {
+                                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: red;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica;
+                                    }
+                                </code>
+                        </pre>
+                        </div>
+
+                    <p>We can also access an element by its Id with the # symbol.</p>
+
+                    <div class="code-snippet">
+                        <pre>
+                            <code>
+                                #section1 {
+                                    &nbsp;&nbsp;&nbsp;&nbsp;color: grey;
+                                }
+                            </code>
+                    </pre>
+                    </div>
+
+                    <p> We can use the class attribute to references multiple elements ç
+                        so that they are styled similarly. 
+                        but we can only acces one element by its Id since i HTML 
+                        any given element will have a determenined Id, but we can 
+                        have multiple elements with the same class.</p>
+
+                    <p>This snippet will refer to every element thas uses this 
+                        class. namely all sections will have a left border of 
+                        1px, dotted.</p>
+
+                    <code>
+                        
+                    </code>
+
+                    <div class="code-snippet">
+                        <pre>
+                            <code>
+                                .section-div {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;  border-left: dotted 1px;<br>
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                   
+
+                    <p>on the other hand, with this snippet we can alter all the 
+                        p elements inside the given section, referenced by the 
+                        section id.</p>
+                    
+                    <div class="code-snippet">
+                        <pre>
+                            <code>
+                                #section3 p {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;  font-family: Sans-seriff;<br>
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </content>
+
+            </section>
+
+                <section id="specification" class="main-section">
+                    <header>
+                        <h2>Specification</h2>
+                    </header>
+                    <content>
+                        <p>
+                            All web standards technologies (HTML, CSS, JavaScript, etc.) 
+                            are defined in giant documents called specifications 
+                            (or simply "specs"), which are published by standards 
+                            organizations (such as the W3C, WHATWG, ECMA, or Khronos) 
+                            and define precisely how those technologies are supposed to
+                             behave.
+                        </p>
+
+                        <p>CSS is no different — it is developed by a group within the
+                             W3C called the CSS Working Group. This group is made of 
+                             representatives of browser vendors and other companies 
+                             who have an interest in CSS. There are also other people,
+                              known as invited experts, who act as independent voices; 
+                              they are not linked to a member organization.</p>
+
+                        <p>New CSS features are developed, or specified, by the 
+                            CSS Working Group. Sometimes because a particular 
+                            browser is interested in having some capability, 
+                            other times because web designers and developers 
+                            are asking for a feature, and sometimes because the 
+                            Working Group itself has identified a requirement. 
+                            CSS is constantly developing, with new features 
+                            coming available. However, a key thing about CSS 
+                            is that everyone works very hard to never change 
+                            things in a way that would break old websites. 
+                            A website built in 2000, using the limited CSS 
+                            available then, should still be usable in a browser 
+                            today!</p>
+                        <p>As a newcomer to CSS, it is likely that you will find 
+                            the CSS specs overwhelming — they are intended for 
+                            engineers to use to implement support for the features 
+                            in user agents, not for web developers to read to 
+                            understand CSS. Many experienced developers would much 
+                            rather refer to MDN documentation or other tutorials. 
+                            It is however worth knowing that they exist, 
+                            understanding the relationship between the CSS you are
+                             using, browser support (see below), and the specs.</p>
+                        
+                    </content>
+                </section>
+                <section id="browser_support" class="main-section">
+                    <header>
+                        <h2>Browser Support</h2>
+                    </header>
+                    <content>
+                        <p>Once CSS has been specified then it is only useful
+                             for us in developing web pages if one or more 
+                             browsers have implemented it. This means that 
+                             the code has been written to turn the instruction 
+                             in our CSS file into something that can be output 
+                             to the screen. We'll look at this process more in 
+                             the lesson How CSS works. It is unusual for all 
+                             browsers to implement a feature at the same time, 
+                             and so there is usually a gap where you can use 
+                             some part of CSS in some browsers and not in others. 
+                             For this reason, being able to check implementation 
+                             status is useful. On each property page on MDN you 
+                             can see the status of the property you are interested 
+                             in, so you can tell if you will be able to use it on 
+                             a website.</p>
+
+                             <p>Some common browsers the public use are:</p>
+                             <ul>
+                                <li>Chrome</li>
+                                <li>Mozilla</li>
+                                <li>Safari</li>
+                                <li>Opera</li>
+                                <li>Edge</li>
+
+                             </ul>
+
+                    </content>
+
+
+                </section>
+            <section id="references" class="main-section">
+                <header>
+                    <h2>References</h2>
+                </header>
+                <content>
+                    <ul>
+                        <li>All the documentation in this page is taken from the 
+                            <a href="https://developer.mozilla.org/es/docs/Web/CSS" >
+                                MDN - CSS</a> page</li>
+                    </ul>
+                </content>
+            </section>
+            
+        </main>
+       </body>
+</html>
